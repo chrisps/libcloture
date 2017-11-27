@@ -38,7 +38,7 @@ namespace cloture::util::vector {
         __forceinline void push_back(const T &x)
         {
             reserve(n+1);
-            new (array+n) T(x); // create a new element in the qvector
+            new (array+n) T(x);
             ++n;
         }
         __forceinline __pseudopure size_t size() const { return n; }
